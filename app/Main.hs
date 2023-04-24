@@ -17,7 +17,7 @@ handler e
 
 trys :: IO ()
 trys = getArgs                                     >>=
-       (readFile . head)                           >>= \file ->
+       readFile . head                             >>= \file ->
        putStrLn $ "The file has "                  <>
                    (show . length . lines) file    <>
                    " lines!"
