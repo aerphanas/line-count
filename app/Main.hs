@@ -19,7 +19,7 @@ trys :: IO ()
 trys = getArgs                                     >>=
        (readFile . head)                           >>= \file ->
        putStrLn $ "The file has "                  <>
-                   (show . length . lines) file <>
+                   (show . length . lines) file    <>
                    " lines!"
 
 main :: IO ()
